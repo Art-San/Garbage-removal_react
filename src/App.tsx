@@ -1,0 +1,34 @@
+import React, { useEffect } from 'react';
+import Header from './components/Header';
+import Hero from './components/Hero';
+import Services from './components/Services';
+import Process from './components/Process';
+import Gallery from './components/Gallery';
+import Pricing from './components/Pricing';
+import Testimonials from './components/Testimonials';
+import CallToAction from './components/CallToAction';
+import Contact from './components/Contact';
+import Footer from './components/Footer';
+
+function App() {
+  useEffect(() => {
+    document.title = 'ЧистоСтрой - Вывоз строительного мусора';
+  }, []);
+
+  return (
+    <div className="min-h-screen bg-white">
+      <Header />
+      <Hero />
+      <Services />
+      <Process />
+      <Gallery />
+      <Pricing />
+      <Testimonials />
+      <CallToAction />
+      <Contact />
+      <Footer />
+    </div>
+  );
+}
+
+export default App;
