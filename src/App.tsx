@@ -31,7 +31,7 @@ function App() {
       <CallToAction />
       <Contact />
       <Footer />
-      {isOpenModal && <Modal onCancel={toggleModal} />}
+      {isOpenModal && <Modal toggleModal={toggleModal} />}
     </div>
   )
 }
