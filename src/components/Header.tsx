@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react'
+import { useState, useEffect } from 'react'
 import { Menu, X, Truck } from 'lucide-react'
 
 const Header = () => {
