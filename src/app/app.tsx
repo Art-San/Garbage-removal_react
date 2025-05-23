@@ -1,5 +1,12 @@
+import { Outlet } from 'react-router-dom'
+import { AppHeader } from '@/features/header'
 export function App() {
-  return <div className=" text-sky-400">Hello World</div>
+  return (
+    <div>
+      <AppHeader />
+      <Outlet />
+    </div>
+  )
 }
 
 // import { useEffect } from 'react'
