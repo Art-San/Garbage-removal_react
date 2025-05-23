@@ -6,11 +6,11 @@ import { ROUTES, type PathParams } from '@/shared/model/routes'
 import { useParams } from 'react-router-dom'
 
 function BoardPage() {
-  const cardId = useParams<PathParams[typeof ROUTES.CARD]>()
+  const { cardId } = useParams<PathParams[typeof ROUTES.CARD]>()
 
-  console.log(cardId)
+  console.log(1234, cardId)
 
-  return <div>Card page</div>
+  return <div>Card page: {cardId}</div>
 }
 
 export const Component = BoardPage

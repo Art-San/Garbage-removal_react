@@ -1,3 +1,2 @@
-export function AppHeader() {
-  return <div>Header</div>;
-}
+export { HomeHeader } from './home-header'
+export { MainHeader } from './main-header'
