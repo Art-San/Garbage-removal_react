@@ -6,12 +6,14 @@ export const ROUTES = {
   REGISTER: '/register',
   DASHBOARD: '/dashboard',
   CARDS: '/cards',
-  CARD: '/cards/:cardId'
+  CARD: '/cards/:slug',
+  EDIT_CARD: '/edit-card/:cardId'
 } as const
 
 export type PathParams = {
   [ROUTES.CARD]: {
-    cardId: string
+    cardId?: string
+    slug?: string
   }
 }
 
