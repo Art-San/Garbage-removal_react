@@ -1,0 +1,66 @@
+schemas:
+  Card:
+    type: object
+    required:
+      - id
+      - name
+    properties:
+      id:
+        type: string
+      name:
+        type: string
+  CreateCard:
+    type: object
+    required:
+      - name
+    properties:
+      name:
+        type: string
+
+getAllCards:
+  summary: Get all Cards for current user
+  responses:
+    '200':
+      description: List of Cards
+      content:
+        application/json:
+          schema:
+            type: array
+            items:
+              $ref: '#/schemas/Card'
+    '401':
+      $ref: '../shared/responses.yaml#/UnauthorizedError'
+
+createCard:
+  summary: Create a new Card
+  requestBody:
+    required: true
+    content:
+      application/json:
+        schema:
+          $ref: '#/schemas/CreateCard'
+  responses:
+    '201':
+      description: Card created successfully
+      content:
+        application/json:
+          schema:
+            $ref: '#/schemas/Card'
+    '401':
+      $ref: '../shared/responses.yaml#/UnauthorizedError'
+
+deleteCard:
+  summary: Delete a Card
+  parameters:
+    - name: cardId
+      in: path
+      required: true
+      schema:
+        type: string
+  responses:
+    '204':
+      description: Card deleted successfully
+    '401':
+      $ref: '../shared/responses.yaml#/UnauthorizedError'
+    '404':
+      $ref: '../shared/responses.yaml#/NotFoundError'

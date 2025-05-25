@@ -2,10 +2,15 @@ import { createBrowserRouter } from 'react-router-dom'
 import { App } from './app'
 import { HomeLayout, MainLayout } from './layouts'
 import { homeRoutes, mainRoutes, authRoutes, errorRoutes } from './routes'
+import { Providers } from './providers'
 
 export const router = createBrowserRouter([
   {
-    element: <App />,
+    element: (
+      <Providers>
+        <App />
+      </Providers>
+    ),
     children: [
       {
         element: <HomeLayout />,
