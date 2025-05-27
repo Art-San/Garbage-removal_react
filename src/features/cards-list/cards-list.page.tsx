@@ -1,4 +1,4 @@
-import { rqClient } from '@/shared/api/instace'
+import { rqClient } from '@/shared/api/instance'
 import { CONFIG } from '@/shared/model/config'
 import { ROUTES } from '@/shared/model/routes'
 import { Link, href } from 'react-router-dom'
