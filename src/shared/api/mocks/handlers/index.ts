@@ -25,11 +25,11 @@ import type { ApiSchemas } from '../../schema'
 
 const cards: ApiSchemas['Card'][] = [
   {
-    id: 'board-1',
+    id: 'card-1',
     name: 'Marketing Campaign'
   },
   {
-    id: 'board-2',
+    id: 'card-2',
     name: 'Product Roadmap'
   }
 ]
