@@ -7,7 +7,7 @@ import { useModal } from '../context/modal/useModal'
 // Тип для ключей объекта `offer`
 type TOfferKey = keyof typeof offer
 
-const Hero = () => {
+export const Hero = () => {
   const { toggleModal } = useModal()
   const queryParams = useQueryParams()
   const query = queryParams.ifso as TOfferKey
@@ -71,5 +71,3 @@ const Hero = () => {
     </section>
   )
 }
-
-export default Hero

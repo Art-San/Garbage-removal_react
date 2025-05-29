@@ -4,15 +4,15 @@ export const homeRoutes = [
   {
     path: ROUTES.HOME,
     lazy: () => import('@/features/home/home.page')
-  },
-  {
-    path: ROUTES.CARDS,
-    lazy: () => import('@/features/cards-list/cards-list.page')
-  },
-  {
-    path: ROUTES.CARD,
-    lazy: () => import('@/features/card/card.page')
   }
+  // {
+  //   path: ROUTES.CARDS,
+  //   lazy: () => import('@/features/cards-list/cards-list.page')
+  // },
+  // {
+  //   path: ROUTES.CARD,
+  //   lazy: () => import('@/features/card/card.page')
+  // }
 ]
 
 export const mainRoutes = [

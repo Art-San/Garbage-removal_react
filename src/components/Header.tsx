@@ -1,7 +1,7 @@
 import { useState, useEffect } from 'react'
 import { Menu, X, Truck } from 'lucide-react'
 
-const Header = () => {
+export const Header = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false)
   const [isScrolled, setIsScrolled] = useState(false)
 
@@ -132,5 +132,3 @@ const Header = () => {
     </header>
   )
 }
-
-export default Header
