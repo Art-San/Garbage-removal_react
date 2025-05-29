@@ -1,16 +1,12 @@
-// export function LoginPage() {
-//   return <div>Login page</div>;
-// }
-
-// export function RegisterPage() {
-//   return <div>Register page</div>;
-// }
+import { Link } from 'react-router-dom'
+import { AuthLayout } from './ui/auth-layout'
+import { LoginForm } from './ui/login-form'
+import { ROUTES } from '@/shared/model/routes'
 
 function LoginPage() {
   return (
     <>
-      <div className=""> LoginPage</div>
-      {/* <AuthLayout
+      <AuthLayout
         form={<LoginForm />}
         title="Вход в систему"
         description="Введите ваш email и пароль для входа в систему"
@@ -19,7 +15,7 @@ function LoginPage() {
             Нет аккаунта? <Link to={ROUTES.REGISTER}>Зарегистрироваться</Link>
           </>
         }
-      ></AuthLayout> */}
+      ></AuthLayout>
     </>
   )
 }

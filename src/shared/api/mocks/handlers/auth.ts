@@ -1,28 +1,25 @@
 import { ApiSchemas } from '../../schema'
 import { http } from '../http'
-import { HttpResponse } from 'msw'
+import { delay, HttpResponse } from 'msw'
 
 const mockUsers: ApiSchemas['User'][] = [
   {
     id: '1',
-    email: 'admin@gmail.com'
+    email: 'art@san.ru'
   }
 ]
 
 const userPasswords = new Map<string, string>()
-userPasswords.set('admin@gmail.com', '123456')
+userPasswords.set('art@san.ru', '123456')
 
 const mockTokens = new Map<string, string>()
 
 export const authHandlers = [
   http.post('/auth/login', async ({ request }) => {
     const body = await request.json()
-
     const user = mockUsers.find((u) => u.email === body.email)
     const storedPassword = userPasswords.get(body.email)
-    console.log(23, storedPassword)
-    console.log(24, userPasswords)
-
+    await delay()
     if (!user || !storedPassword || storedPassword !== body.password) {
       return HttpResponse.json(
         {
@@ -63,6 +60,7 @@ export const authHandlers = [
 
     const token = `mock-token-${Date.now()}`
     mockUsers.push(newUser)
+    console.log(45, mockUsers)
     userPasswords.set(body.email, body.password)
     mockTokens.set(body.email, token)
 
