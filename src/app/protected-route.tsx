@@ -5,7 +5,7 @@ import { Navigate } from 'react-router-dom'
 // import { enableMocking } from '@/shared/api/mocks'
 
 export function ProtectedRoute() {
-  const { session } = { session: true }
+  const { session } = { session: false }
   // const { session } = useSession()
 
   if (!session) {

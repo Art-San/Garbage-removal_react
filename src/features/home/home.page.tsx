@@ -1,8 +1,8 @@
 import { Header } from '@/components/Header'
 import { Hero } from '@/components/Hero'
+import Services from '@/components/Services'
 import { useEffect } from 'react'
 
-// import Services from './components/Services'
 // import Process from './components/Process'
 // import Gallery from './components/Gallery'
 // import Pricing from './components/Pricing'
@@ -22,9 +22,9 @@ function HomePage() {
 
   return (
     <div className="min-h-screen bg-white">
-      {/* <Header /> */}
+      <Header />
       <Hero />
-      {/* <Services /> */}
+      <Services />
       {/* <Process /> */}
       {/* <Gallery /> */}
       {/* <Pricing /> */}

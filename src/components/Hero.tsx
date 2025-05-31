@@ -12,6 +12,7 @@ export const Hero = () => {
   const queryParams = useQueryParams()
   const query = queryParams.ifso as TOfferKey
   const currentOffer = offer[query] || offer.default
+  console.log(123, query)
 
   return (
     <section className="pt-24 bg-gradient-to-b from-white to-gray-50">
@@ -19,8 +20,9 @@ export const Hero = () => {
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
           <div>
             <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-gray-800 leading-tight">
-              {currentOffer.title} <span className="text-[#3644b9]">чисто</span>{' '}
-              и <span className="text-[#3644b9]">быстро</span> в Томске
+              {currentOffer.title} от{' '}
+              <span className="text-[#3644b9]">{currentOffer.price}</span> руб в
+              Томске
             </h1>
             <p className="mt-6 text-lg text-gray-600 max-w-lg">
               {currentOffer.description}
@@ -61,8 +63,8 @@ export const Hero = () => {
             <div className="absolute -top-6 -right-6 w-32 h-32 bg-[#3644b9] opacity-10 rounded-full"></div>
             <div className="absolute -bottom-6 -left-6 w-40 h-40 bg-[#3644b9] opacity-10 rounded-full"></div>
             <img
-              src="two movers and a car.png"
-              alt="Грузчики грузят мусор в машину"
+              src={currentOffer.photo_path || 'two movers and a car.png'}
+              alt={currentOffer.alt || 'Грузчики грузят мусор в машину'}
               className="w-full h-auto object-cover rounded-2xl shadow-lg relative"
             />
           </div>
