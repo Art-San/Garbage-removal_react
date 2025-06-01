@@ -10,6 +10,7 @@ import { Link, href } from 'react-router-dom'
 
 const BoardListPage = () => {
   const cardsQuery = rqClient.useQuery('get', '/cards')
+
   const createCardMutation = rqClient.useMutation('post', '/cards', {
     onSettled: async () => {
       queryClient.invalidateQueries(rqClient.queryOptions('get', '/cards'))

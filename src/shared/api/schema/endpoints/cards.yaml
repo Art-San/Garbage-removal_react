@@ -19,6 +19,8 @@ schemas:
 
 getAllCards:
   summary: Get all Cards for current user
+  security:
+    - bearerAuth: []
   responses:
     '200':
       description: List of Cards
@@ -33,6 +35,8 @@ getAllCards:
 
 createCard:
   summary: Create a new Card
+  security:
+    - bearerAuth: []
   requestBody:
     required: true
     content:
@@ -51,6 +55,8 @@ createCard:
 
 deleteCard:
   summary: Delete a Card
+  security:
+    - bearerAuth: []
   parameters:
     - name: cardId
       in: path

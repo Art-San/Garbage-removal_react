@@ -22,6 +22,7 @@
 import { HttpResponse } from 'msw'
 import { http } from '../http'
 import type { ApiSchemas } from '../../schema'
+import { verifyTokenOrThrow } from '../session'
 
 const cards: ApiSchemas['Card'][] = [
   {
@@ -35,10 +36,12 @@ const cards: ApiSchemas['Card'][] = [
 ]
 
 export const cardsHandlers = [
-  http.get('/cards', () => {
+  http.get('/cards', async (ctx) => {
+    await verifyTokenOrThrow(ctx.request)
     return HttpResponse.json(cards)
   }),
-  http.delete('/cards/{cardId}', async ({ params }) => {
+  http.delete('/cards/{cardId}', async ({ params, request }) => {
+    await verifyTokenOrThrow(request)
     const { cardId } = params
     const index = cards.findIndex((board) => board.id === cardId)
 
@@ -53,6 +56,7 @@ export const cardsHandlers = [
     return new HttpResponse(null, { status: 204 })
   }),
   http.post('/cards', async (ctx) => {
+    await verifyTokenOrThrow(ctx.request)
     const data = await ctx.request.json()
     const board: ApiSchemas['Card'] = {
       id: crypto.randomUUID(),
