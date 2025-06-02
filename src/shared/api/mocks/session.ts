@@ -8,7 +8,7 @@ type Session = {
 
 const JWT_SECRET = new TextEncoder().encode('your-secret-key')
 const ACCESS_TOKEN_EXPIRY = '3s'
-const REFRESH_TOKEN_EXPIRY = '7d'
+const REFRESH_TOKEN_EXPIRY = '10s'
 
 export function createRefreshTokenCookie(refreshToken: string) {
   return `refreshToken=${refreshToken}; Max-Age=604800`
@@ -41,7 +41,7 @@ export async function verifyTokenOrThrow(request: Request): Promise<Session> {
   if (!session) {
     throw HttpResponse.json(
       {
-        message: 'Invalid token',
+        message: 'Недействительный токен',
         code: 'INVALID_TOKEN'
       },
       { status: 401 }

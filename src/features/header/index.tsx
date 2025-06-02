@@ -1,2 +1,2 @@
 export { HomeHeader } from './home-header'
-export { MainHeader } from './main-header'
+export { DashboardHeader } from './dashboard-header'

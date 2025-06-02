@@ -1,4 +1,4 @@
-import { rqClient } from '@/shared/api/instance'
+import { privateRqClient } from '@/shared/api/instance'
 import { queryClient } from '@/shared/api/query-client'
 import { CONFIG } from '@/shared/model/config'
 import { ROUTES } from '@/shared/model/routes'
@@ -9,18 +9,26 @@ import { Link, href } from 'react-router-dom'
 // export { BoardCard } from './card-card'
 
 const BoardListPage = () => {
-  const cardsQuery = rqClient.useQuery('get', '/cards')
+  const cardsQuery = privateRqClient.useQuery('get', '/cards')
 
-  const createCardMutation = rqClient.useMutation('post', '/cards', {
+  const createCardMutation = privateRqClient.useMutation('post', '/cards', {
     onSettled: async () => {
-      queryClient.invalidateQueries(rqClient.queryOptions('get', '/cards'))
+      queryClient.invalidateQueries(
+        privateRqClient.queryOptions('get', '/cards')
+      )
     }
   })
-  const deleteCardMutation = rqClient.useMutation('delete', '/cards/{cardId}', {
-    onSettled: async () => {
-      queryClient.invalidateQueries(rqClient.queryOptions('get', '/cards'))
+  const deleteCardMutation = privateRqClient.useMutation(
+    'delete',
+    '/cards/{cardId}',
+    {
+      onSettled: async () => {
+        queryClient.invalidateQueries(
+          privateRqClient.queryOptions('get', '/cards')
+        )
+      }
     }
-  })
+  )
 
   return (
     <div className=" container mx-auto p-4">

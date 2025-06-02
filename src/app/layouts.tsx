@@ -1,4 +1,4 @@
-import { HomeHeader, MainHeader } from '@/features/header'
+import { HomeHeader, DashboardHeader } from '@/features/header'
 import { Outlet } from 'react-router-dom'
 import { ProtectedRoute } from './protected-route'
 
@@ -11,10 +11,10 @@ export function HomeLayout() {
   )
 }
 
-export function MainLayout() {
+export function DashboardLayout() {
   return (
     <>
-      <MainHeader />
+      <DashboardHeader />
       <ProtectedRoute />
     </>
   )

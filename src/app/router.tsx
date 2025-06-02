@@ -1,8 +1,9 @@
 import { createBrowserRouter } from 'react-router-dom'
 import { App } from './app'
-import { HomeLayout, MainLayout } from './layouts'
-import { homeRoutes, mainRoutes, authRoutes, errorRoutes } from './routes'
+import { HomeLayout, DashboardLayout } from './layouts'
+import { homeRoutes, dashboardRoutes, authRoutes, errorRoutes } from './routes'
 import { Providers } from './providers'
+import { protectedLoader } from './protected-route'
 
 export const router = createBrowserRouter([
   {
@@ -17,8 +18,9 @@ export const router = createBrowserRouter([
         children: homeRoutes
       },
       {
-        element: <MainLayout />,
-        children: mainRoutes
+        loader: protectedLoader,
+        element: <DashboardLayout />,
+        children: dashboardRoutes
       },
       ...authRoutes,
       ...errorRoutes

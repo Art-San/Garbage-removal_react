@@ -1,11 +1,10 @@
 import { ROUTES } from '@/shared/model/routes'
-import { Outlet } from 'react-router-dom'
+import { Outlet, redirect } from 'react-router-dom'
 import { Navigate } from 'react-router-dom'
 import { useSession } from '@/shared/model/session'
-// import { enableMocking } from '@/shared/api/mocks'
+import { enableMocking } from '@/shared/api/mocks'
 
 export function ProtectedRoute() {
-  // const { session } = { session: true }
   const { session } = useSession()
 
   if (!session) {
@@ -15,14 +14,14 @@ export function ProtectedRoute() {
   return <Outlet />
 }
 
-// export async function protectedLoader() {
-//   await enableMocking()
+export async function protectedLoader() {
+  await enableMocking()
 
-//   const token = await useSession.getState().refreshToken()
+  const token = await useSession.getState().refreshToken()
 
-//   if (!token) {
-//     return redirect(ROUTES.LOGIN)
-//   }
+  if (!token) {
+    return redirect(ROUTES.LOGIN)
+  }
 
-//   return null
-// }
+  return null
+}

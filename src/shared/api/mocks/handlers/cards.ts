@@ -1,24 +1,3 @@
-// import { HttpResponse } from 'msw'
-// import { http } from '../http'
-// import { ApiSchemas } from '../../schema'
-
-// const cards: ApiSchemas['Card'][] = [
-//   {
-//     id: 'board-1',
-//     name: 'Marketing Campaign'
-//   },
-//   {
-//     id: 'board-2',
-//     name: 'Product Roadmap'
-//   }
-// ]
-
-// export const handlers = [
-//   http.get('/cards', () => {
-//     return HttpResponse.json(cards)
-//   })
-// ]
-
 import { HttpResponse } from 'msw'
 import { http } from '../http'
 import type { ApiSchemas } from '../../schema'

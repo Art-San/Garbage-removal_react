@@ -2,7 +2,7 @@ import { useSession } from '@/shared/model/session'
 
 import { Button } from '@/shared/ui/kit/button'
 
-export function MainHeader() {
+export function DashboardHeader() {
   const { session, logout } = useSession()
 
   if (!session) {

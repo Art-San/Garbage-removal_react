@@ -21,7 +21,6 @@ const mockUsers: ApiSchemas['User'][] = [
 const userPasswords = new Map<string, string>()
 userPasswords.set('a@s.ru', '123456')
 userPasswords.set('admin@gmail.com', '123456')
-console.log(123, userPasswords)
 
 // const mockTokens = new Map<string, string>() // не нужны теперь
 

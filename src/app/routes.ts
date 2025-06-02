@@ -15,7 +15,7 @@ export const homeRoutes = [
   }
 ]
 
-export const mainRoutes = [
+export const dashboardRoutes = [
   {
     path: ROUTES.DASHBOARD,
     lazy: () => import('@/features/dashboard/dashboard.page')
