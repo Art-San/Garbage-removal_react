@@ -4,7 +4,7 @@ export const offer = {
     description:
       'Избавим вас от различного мусора оперативно, доступно и экологично. Погрузка и вывоз на полигон от 5500 рублей.',
     price: '3500',
-    photo_path: 'two movers and a car.png',
+    photo_path: 'offer/two movers and a car.png',
     alt: 'Грузчики грузят мусор в машину'
   },
   construction: {
@@ -28,7 +28,7 @@ export const offer = {
     description:
       'Избавим вас от мусора, хлама и старой мебели оперативно, доступно и экологично. Погрузка и вывоз на полигон то 5500 рублей.',
     price: '3500',
-    photo_path: 'gazel v kyzove meshki.png',
+    photo_path: 'offer/gazelle_bort.png',
     alt: ''
   },
   kamaz: {
