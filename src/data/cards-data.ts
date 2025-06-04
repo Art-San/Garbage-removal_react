@@ -26,13 +26,13 @@ export const cards_data = [
       'Газель будка объем 10м3 г/п 1.5 тонн . На погрузку дается 30 мин далее 500р каждые пол часа',
     slug: 'gazelle-booth',
     price: '4000',
-    photo_path: 'cards/gazelle_bort.png',
+    photo_path: 'cards/gazelle-booth.png',
     alt: 'GAZ 33025 flatbed'
   },
 
   {
     id: '4',
-    title: 'Каааз',
+    title: 'Камаз',
     description:
       'КамАЗ кузов объем 10 м3 до 10 тонн (один час на погрузку), далее 1500 рублей каждые 30 минут.',
     slug: 'kamaz',
