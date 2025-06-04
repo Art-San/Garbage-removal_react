@@ -2,6 +2,7 @@ import { Hero } from '@/components/Hero'
 import Services from '@/components/Services'
 import { useEffect } from 'react'
 import { HomeHeader } from '../header'
+import { CardServiceList } from '../cards-service/cards-service-list'
 
 // import Process from './components/Process'
 // import Gallery from './components/Gallery'
@@ -25,6 +26,7 @@ function HomePage() {
       <HomeHeader />
       <Hero />
       <Services />
+      <CardServiceList />
       {/* <Process /> */}
       {/* <Gallery /> */}
       {/* <Pricing /> */}
