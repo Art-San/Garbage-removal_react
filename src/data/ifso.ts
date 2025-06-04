@@ -28,7 +28,7 @@ export const offer = {
     description:
       'Избавим вас от мусора, хлама и старой мебели оперативно, доступно и экологично. Погрузка и вывоз на полигон то 5500 рублей.',
     price: '3500',
-    photo_path: 'offer/gazelle_bort.png',
+    photo_path: 'offer/gazelle-two-movers.png',
     alt: ''
   },
   kamaz: {
@@ -36,7 +36,7 @@ export const offer = {
     description:
       'Избавим вас от мусора, хлама и старой мебели оперативно, доступно и экологично. Погрузка и вывоз на полигон то 9000 рублей.',
     price: '9000',
-    photo_path: '',
+    photo_path: 'offer/kamaz-edet-po-doroge.png',
     alt: ''
   },
   other: {
