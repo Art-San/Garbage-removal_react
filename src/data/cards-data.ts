@@ -28,24 +28,18 @@ export const cards_data = [
     price: '4000',
     photo_path: 'cards/gazelle_bort.png',
     alt: 'GAZ 33025 flatbed'
-  }
+  },
 
-  // gazelle_booth: {
-  //   title: 'Газель будка',
-  //   description:
-  //     'Газель будка объем 10м3 г/п 1.5 тонн . На погрузку дается 30 мин далее 500р каждые пол часа',
-  //   price: '3500',
-  //   photo_path: '',
-  //   alt: ''
-  // },
-  // kamaz: {
-  //   title: 'Каааз',
-  //   description:
-  //     'КамАЗ кузов объем 10 м3 до 10 тонн (один час на погрузку), далее 1500 рублей каждые 30 минут.',
-  //   price: '3500',
-  //   photo_path: '',
-  //   alt: ''
-  // },
+  {
+    id: '4',
+    title: 'Каааз',
+    description:
+      'КамАЗ кузов объем 10 м3 до 10 тонн (один час на погрузку), далее 1500 рублей каждые 30 минут.',
+    slug: 'kamaz',
+    price: '3500',
+    photo_path: 'cards/kamaz.png',
+    alt: ''
+  }
   // front_loader: {
   //   title: 'Фронтальный погрузчик',
   //   description:
