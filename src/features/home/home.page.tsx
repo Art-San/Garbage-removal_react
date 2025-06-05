@@ -1,8 +1,8 @@
 import { Hero } from '@/components/Hero'
-import Services from '@/components/Services'
 import { useEffect } from 'react'
 import { HomeHeader } from '../header'
-import { CardServiceList } from '../cards-service/cards-service-list'
+import { CardsServiceList } from '../cards-service'
+import Services from '@/components/Services'
 
 // import Process from './components/Process'
 // import Gallery from './components/Gallery'
@@ -18,7 +18,7 @@ function HomePage() {
   // const { isOpenModal, toggleModal } = useModal()
 
   useEffect(() => {
-    document.title = 'ЧистоСтрой - Вывоз строительного мусора'
+    document.title = 'Вывоз мусора -- ЧистоСтрой'
   }, [])
 
   return (
@@ -26,7 +26,7 @@ function HomePage() {
       <HomeHeader />
       <Hero />
       <Services />
-      <CardServiceList />
+      <CardsServiceList />
       {/* <Process /> */}
       {/* <Gallery /> */}
       {/* <Pricing /> */}

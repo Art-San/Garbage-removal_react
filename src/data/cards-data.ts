@@ -1,7 +1,7 @@
 export const cards_data = [
   {
     id: '1',
-    title: 'Грузчики',
+    title: 'Грузчик',
     description:
       'Грузчики соберут, вынесут и погрузят мусор. Первый час оплачиваться полностью далее разбивка по пол часа.',
     slug: 'movers',
@@ -29,17 +29,27 @@ export const cards_data = [
     photo_path: 'cards/gazelle-booth.png',
     alt: 'GAZ 33025 flatbed'
   },
-
+  {
+    id: '5',
+    title: 'Газель с погрузкой',
+    description:
+      'До 3м3, до 1,5 тонн при условии что два грузчика успею погрузить за час.',
+    slug: 'kamaz',
+    price: '5500',
+    photo_path: 'cards/gazelle-two-movers.png',
+    alt: ''
+  },
   {
     id: '4',
     title: 'Камаз',
     description:
       'КамАЗ кузов объем 10 м3 до 10 тонн (один час на погрузку), далее 1500 рублей каждые 30 минут.',
     slug: 'kamaz',
-    price: '3500',
+    price: '9000',
     photo_path: 'cards/kamaz.png',
     alt: ''
   }
+
   // front_loader: {
   //   title: 'Фронтальный погрузчик',
   //   description:

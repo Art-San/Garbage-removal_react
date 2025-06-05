@@ -18,7 +18,6 @@ export type TProductCardProps = {
 }
 
 export const ServiceCard = ({ card }: { card: TProductCardProps }) => {
-  console.log(card.photo_path)
   return (
     <Card
       key={card.id}
@@ -31,12 +30,14 @@ export const ServiceCard = ({ card }: { card: TProductCardProps }) => {
       </div>
 
       {/* Заголовок и описание */}
-      <CardHeader>
-        <CardTitle>{card.title}</CardTitle>
+      <CardHeader className=" px-1">
+        <CardTitle className=" text-2xl">{card.title}</CardTitle>
+        <CardTitle>от {card.price} руб</CardTitle>
         <CardDescription>{card.description}</CardDescription>
       </CardHeader>
 
       {/* Дополнительное содержимое (например, кнопка "Купить") */}
+
       <CardContent className="flex justify-end">
         <Button className="cursor-pointer px-6 py-3 bg-[#3644b9] text-white rounded-full font-medium text-center hover:bg-[#2d399c] transition-colors flex items-center justify-center">
           Заказать
