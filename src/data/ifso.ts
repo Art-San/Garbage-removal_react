@@ -36,7 +36,7 @@ export const offer = {
     description:
       'Избавим вас от мусора, хлама и старой мебели оперативно, доступно и экологично. Погрузка и вывоз на полигон то 9000 рублей.',
     price: '9000',
-    photo_path: 'offer/kamaz-edet-po-doroge.png',
+    photo_path: 'offer/kamaz_odna_osi.png',
     alt: ''
   },
   other: {
