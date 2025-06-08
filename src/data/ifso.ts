@@ -28,7 +28,7 @@ export const offer = {
     description:
       'Избавим вас от мусора, хлама и старой мебели оперативно, доступно и экологично. Погрузка и вывоз на полигон то 5500 рублей.',
     price: '3500',
-    photo_path: 'offer/gazelle-two-movers.png',
+    photo_path: 'offer/gazelle-two-movers-1.png',
     alt: ''
   },
   kamaz: {
